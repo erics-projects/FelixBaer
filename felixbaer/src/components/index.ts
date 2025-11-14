@@ -9,6 +9,8 @@ export { default as Arrow } from './Arrow';
 export { default as Keyvisual } from './Keyvisual';
 export { default as ArtistSection } from './ArtistSection';
 export { default as Gallery } from './Gallery';
+export { default as Exhibitions } from './Exhibitions';
+export { default as Contact } from './Contact';
 
 // Export component types
 export type { ButtonProps } from './Button';
@@ -21,3 +23,5 @@ export type { ArrowProps } from './Arrow';
 export type { KeyvisualProps } from './Keyvisual';
 export type { ArtistSectionProps } from './ArtistSection';
 export type { GalleryProps, GalleryFolder, GalleryImage } from './Gallery';
+export type { ExhibitionsProps, Exhibition } from './Exhibitions';
+export type { ContactProps, ContactFormData } from './Contact';
