@@ -2,7 +2,7 @@
 
 import { memo, useMemo, useCallback, startTransition, use } from 'react';
 import { cn } from '@/lib/utils';
-import { Keyvisual, ArtistSection, Gallery } from '@/components';
+import { Keyvisual, ArtistSection, Gallery, Exhibitions, Contact } from '@/components';
 
 // Modern Section component with viewport-aware sizing and backdrop support
 const Section = memo<{
@@ -180,26 +180,12 @@ const HomePage = () => {
   // Memoized gallery items
   const galleryItems = useMemo(() => Array.from({ length: 7 }, (_, i) => i + 1), []);
   const timelineItems = useMemo(() => [1, 2, 3, 4], []);
-  const exhibitionItems = useMemo(() => [1, 2], []);
 
 
   // Modern event handlers with useCallback
   const handleButtonClick = useCallback(() => {
     startTransition(() => {
       console.log('Button clicked');
-    });
-  }, []);
-
-  const handleFormSubmit = useCallback((e: React.FormEvent) => {
-    e.preventDefault();
-    startTransition(() => {
-      console.log('Form submitted');
-    });
-  }, []);
-
-  const handleSubmitClick = useCallback(() => {
-    startTransition(() => {
-      console.log('Submit button clicked');
     });
   }, []);
 
@@ -240,107 +226,24 @@ const HomePage = () => {
 
       {/* Exhibitions Section */}
       <Section
-        className="bg-gray-50"
         aria-label="Exhibitions"
         id="exhibitions"
-        fullHeight={true}
+        className="w-full"
       >
-        <Container size="xl">
-          <div className="flex flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] h-full">
-            <header className="w-full lg:w-auto space-y-[3vh]">
-              <h2 className="text-[clamp(1.125rem,2.5vw,2rem)] font-medium">Section Title</h2>
-              <h3 className="text-[clamp(1.5rem,5vw,3rem)] max-w-full lg:max-w-2xl leading-tight font-bold">
-                Section Subtitle
-              </h3>
-            </header>
-            
-            <div className="flex-1 space-y-[4vh] lg:space-y-[6vh] flex flex-col justify-center">
-              <Placeholder variant="text" className="h-[clamp(4rem,8vh,6rem)]">
-                Intro Text
-              </Placeholder>
-              
-              {exhibitionItems.map((item) => (
-                <article key={item} className="space-y-[2vh] p-[2vh] border border-gray-300 rounded-lg">
-                  <header className="space-y-2">
-                    <h4 className="text-[clamp(1.125rem,2.5vw,1.5rem)] font-bold">Exhibition Title</h4>
-                    <time className="text-[clamp(0.875rem,2vw,1rem)] text-gray-600">Date</time>
-                  </header>
-                  <Placeholder variant="text" className="h-[clamp(3rem,6vh,4rem)]">
-                    Description
-                  </Placeholder>
-                  <Placeholder variant="button" onClick={handleButtonClick}>
-                    Link Button
-                  </Placeholder>
-                </article>
-              ))}
-            </div>
-          </div>
-        </Container>
+        <Exhibitions />
       </Section>
 
       {/* Contact Section */}
       <Section
-        className="bg-gray-100"
         aria-label="Contact form"
         id="contact"
-        fullHeight={true}
+        className="w-full"
       >
-        <Container size="md">
-          <div className="h-full flex flex-col justify-center">
-            <header className="text-center space-y-[3vh] mb-[6vh]">
-              <h2 className="text-[clamp(1.125rem,2.5vw,2rem)] font-medium">Contact Title</h2>
-              <h3 className="text-[clamp(1.5rem,5vw,3rem)] font-bold">Contact Subtitle</h3>
-            </header>
-            
-            <form onSubmit={handleFormSubmit} className="space-y-[3vh]">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[2vw]">
-                <Placeholder variant="input" className="h-[clamp(3rem,6vh,4rem)]">
-                  Name Field
-                </Placeholder>
-                <Placeholder variant="input" className="h-[clamp(3rem,6vh,4rem)]">
-                  Email Field
-                </Placeholder>
-              </div>
-              
-              <Placeholder variant="input" className="h-[clamp(6rem,12vh,8rem)]">
-                Message Field
-              </Placeholder>
-              
-              <Placeholder className="h-[clamp(1.5rem,3vh,2rem)]">
-                Checkbox
-              </Placeholder>
-              
-              <div className="flex justify-center sm:justify-end">
-                <Placeholder variant="button" onClick={handleSubmitClick}>
-                  Submit
-                </Placeholder>
-              </div>
-            </form>
-          </div>
-        </Container>
-        
-        {/* Footer */}
-        <Container className="mt-[6vh] pt-[4vh]">
-          <footer className="flex flex-col sm:flex-row justify-between gap-[4vw]">
-            <div className="space-y-3">
-              <h4 className="font-bold text-[clamp(0.875rem,2vw,1rem)]">Contact Info</h4>
-              <Placeholder className="h-[clamp(1rem,2vh,1.5rem)] w-[clamp(8rem,20vw,12rem)]">
-                Email
-              </Placeholder>
-            </div>
-            
-            <div className="space-y-3">
-              <h4 className="font-bold text-[clamp(0.875rem,2vw,1rem)]">Legal</h4>
-              <nav className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-[3vw]">
-                {['Link 1', 'Link 2', 'Link 3'].map((link) => (
-                  <Placeholder key={link} className="h-[clamp(1rem,2vh,1.5rem)] w-[clamp(4rem,10vw,5rem)]">
-                    {link}
-                  </Placeholder>
-                ))}
-              </nav>
-            </div>
-          </footer>
-        </Container>
+        <Contact
+          onSubmit={(data) => {
+            console.log('Form submitted:', data);
+          }}
+        />
       </Section>
     </main>
   );
