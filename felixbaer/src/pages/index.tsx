@@ -2,28 +2,41 @@
 
 import { memo, useMemo, useCallback, startTransition, use } from 'react';
 import { cn } from '@/lib/utils';
-import { Keyvisual } from '@/components';
+import { Keyvisual, ArtistSection, Gallery } from '@/components';
 
-// Modern Section component with viewport-aware sizing
+// Modern Section component with viewport-aware sizing and backdrop support
 const Section = memo<{
   children: React.ReactNode;
   className?: string;
   id?: string;
   'aria-label'?: string;
   fullHeight?: boolean;
+  withBackdrop?: boolean;
+  darkBackdrop?: boolean;
+  compact?: boolean;
 }>((props) => {
-  const { children, className, id, 'aria-label': ariaLabel, fullHeight = false } = props;
+  const {
+    children,
+    className,
+    id,
+    'aria-label': ariaLabel,
+    fullHeight = false,
+    withBackdrop = false,
+    darkBackdrop = false,
+    compact = false
+  } = props;
   
   const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[50vh]';
+  const backdropClass = withBackdrop ? (darkBackdrop ? 'content-backdrop-dark' : 'content-backdrop') : '';
   
   return (
     <section
       id={id}
       className={cn(
         heightClass,
-        "py-[2vh] sm:py-[3vh] lg:py-[4vh]",
-        "px-[2vw] sm:px-[3vw] lg:px-[4vw] xl:px-[5vw]",
-        "max-w-[100vw]",
+        "w-full",
+        "p-0 m-0",
+        backdropClass,
         className
       )}
       aria-label={ariaLabel}
@@ -35,12 +48,13 @@ const Section = memo<{
 
 Section.displayName = 'Section';
 
-// Modern Container component with viewport-constrained design
+// Modern Container component with centered layout and smart spacing
 const Container = memo<{
   children: React.ReactNode;
   size?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
   className?: string;
-}>(({ children, size = 'lg', className }) => {
+  centered?: boolean;
+}>(({ children, size = 'lg', className, centered = false }) => {
   const sizeClasses = useMemo(() => ({
     sm: 'max-w-[min(90vw,1200px)]',
     md: 'max-w-[min(92vw,1400px)]',
@@ -53,7 +67,10 @@ const Container = memo<{
     <div className={cn(
       sizeClasses[size],
       "mx-auto w-full",
+      centered ? "flex items-center justify-center min-h-full" : "",
       "px-[2vw] sm:px-[3vw] lg:px-[4vw]",
+      // Add responsive spacing for large screens
+      "2xl:px-[8vw] 3xl:px-[12vw]",
       className
     )}>
       {children}
@@ -165,6 +182,7 @@ const HomePage = () => {
   const timelineItems = useMemo(() => [1, 2, 3, 4], []);
   const exhibitionItems = useMemo(() => [1, 2], []);
 
+
   // Modern event handlers with useCallback
   const handleButtonClick = useCallback(() => {
     startTransition(() => {
@@ -186,105 +204,39 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white overflow-x-hidden">
-      {/* Hero Section - Keyvisual Component */}
+    <main className="min-h-screen w-full overflow-x-hidden">
+      {/* Combined Hero and Artist Section - full window width */}
       <Section
         fullHeight={true}
-        className="flex items-center justify-center"
-        aria-label="Hero section"
-        id="hero"
+        aria-label="Hero and Artist section"
+        id="hero-artist"
+        className="w-full"
       >
-        <Container size="xl">
-          <Keyvisual onButtonClick={handleButtonClick} />
-        </Container>
+        <div className="w-full flex flex-col">
+          {/* Keyvisual Component - 100% window width */}
+          <div className="w-full">
+            <Keyvisual onButtonClick={handleButtonClick} />
+          </div>
+          
+          {/* Artist Section - 100% window width */}
+          <div className="w-full">
+            <ArtistSection
+              onMoreAboutClick={handleButtonClick}
+              onBackClick={handleButtonClick}
+            />
+          </div>
+        </div>
       </Section>
 
-      {/* Artist Section */}
+      {/* Gallery Section */}
       <Section
-        className="bg-gray-50"
-        aria-label="Artist information"
-        id="artist"
-        fullHeight={true}
+        aria-label="Gallery section"
+        id="gallery"
+        className="w-full"
       >
-        <Container size="xl">
-          <div className="flex flex-col lg:flex-row gap-[4vw] lg:gap-[6vw] items-center h-full">
-            <div className="w-full lg:flex-1 space-y-[3vh] lg:space-y-[4vh]">
-              <h2 className="text-[clamp(1.125rem,2.5vw,2rem)] font-medium">Artist Name</h2>
-              <h3 className="text-[clamp(1.5rem,5vw,3rem)] leading-tight font-bold">
-                Artist Description
-              </h3>
-              <Placeholder variant="text" className="h-[clamp(6rem,12vh,8rem)]">
-                Text Content
-              </Placeholder>
-              <Placeholder variant="button" onClick={handleButtonClick}>
-                Button
-              </Placeholder>
-              <Placeholder className="w-[clamp(6rem,15vw,8rem)] h-[clamp(2rem,4vh,3rem)]">
-                Signature
-              </Placeholder>
-            </div>
-            
-            <div className="w-full lg:flex-1">
-              <Placeholder
-                variant="image"
-                className="w-full h-[clamp(20rem,50vh,40rem)]"
-              >
-                Artist image will be here
-              </Placeholder>
-            </div>
-          </div>
-
-          {/* Biography Section - Hidden but structured */}
-          <details className="max-w-4xl mx-auto mt-[8vh]">
-            <summary className="cursor-pointer text-[clamp(1.25rem,3vw,1.5rem)] font-medium">Biography</summary>
-            <div className="space-y-[3vh] mt-[3vh]">
-              <h3 className="text-[clamp(1.25rem,3vw,2rem)] font-bold">Biography Title</h3>
-              <h4 className="text-[clamp(1.5rem,4vw,2.5rem)]">Biography Subtitle</h4>
-              <Timeline items={timelineItems} />
-              <Placeholder variant="button" onClick={handleButtonClick}>
-                Back Button
-              </Placeholder>
-            </div>
-          </details>
-        </Container>
+        <Gallery />
       </Section>
 
-      {/* Image Gallery Section */}
-      <Section aria-label="Image gallery" id="gallery" fullHeight={true}>
-        <Container size="xl">
-          <div className="h-full flex flex-col justify-center">
-            <h2 className="text-[clamp(1.5rem,5vw,3rem)] text-center mb-[6vh] font-bold">
-              Gallery Title
-            </h2>
-            
-            <ResponsiveGrid minItemWidth="clamp(200px, 25vw, 350px)" gap="clamp(1rem, 3vw, 2rem)">
-              {/* Featured Image */}
-              <div className="space-y-4">
-                <Placeholder
-                  variant="image"
-                  className="w-full h-[clamp(16rem,30vh,24rem)]"
-                >
-                  Main image will be here
-                </Placeholder>
-                <p className="text-center text-[clamp(0.875rem,2vw,1rem)]">Description</p>
-              </div>
-              
-              {/* Gallery Images */}
-              {galleryItems.map((item) => (
-                <article key={item} className="space-y-4">
-                  <Placeholder
-                    variant="image"
-                    className="w-full h-[clamp(12rem,25vh,16rem)]"
-                  >
-                    Image {item}
-                  </Placeholder>
-                  <p className="text-center text-[clamp(0.875rem,2vw,1rem)]">Description</p>
-                </article>
-              ))}
-            </ResponsiveGrid>
-          </div>
-        </Container>
-      </Section>
 
       {/* Exhibitions Section */}
       <Section
