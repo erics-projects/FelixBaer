@@ -21,15 +21,15 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
   }, [onButtonClick]);
 
   return (
-    <section
+    <div
       className={cn("w-full h-full", className)}
       aria-label="Hero section"
     >
-      <div className="flex flex-col lg:flex-row items-center gap-[4vw] lg:gap-[6vw] h-full min-h-[80vh]">
+      <div className="flex flex-col lg:flex-row items-center gap-[4vw] lg:gap-[8vw] h-full max-w-[min(100vw,1800px)] mx-auto">
         {/* Left Content - viewport-aware sizing */}
         <div
-          className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] pl-0 lg:pl-[4vw] text-center lg:text-left"
-          style={{ maxWidth: 'min(852px, 50vw)' }}
+          className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] text-center lg:text-left"
+          style={{ maxWidth: 'min(100%, 600px)' }}
         >
           {/* Subtitle */}
           <h2
@@ -85,10 +85,10 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
         {/* Right Video - fully responsive */}
         <div
           className="w-full lg:flex-1 flex-shrink-0"
-          style={{ maxWidth: 'min(794px, 45vw)' }}
+          style={{ maxWidth: 'min(100%, 700px)' }}
         >
           <div
-            className="w-full rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 relative"
+            className="w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 relative"
             style={{
               height: 'clamp(25rem, 60vh, 62rem)',
               aspectRatio: '4/5',
@@ -152,7 +152,7 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 });
 
