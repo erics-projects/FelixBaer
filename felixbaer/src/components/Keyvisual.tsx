@@ -3,22 +3,13 @@
 import { memo, useCallback, startTransition } from 'react';
 import { cn } from '@/lib/utils';
 import { colors, typography, spacing, borderRadius, effects } from '@/styles/tokens';
-import { Button, Arrow } from '@/components';
 
 export interface KeyvisualProps {
   className?: string;
-  onButtonClick?: () => void;
 }
 
 const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
   // Modern event handler with startTransition
-  const handleButtonClick = useCallback(() => {
-    if (onButtonClick) {
-      startTransition(() => {
-        onButtonClick();
-      });
-    }
-  }, [onButtonClick]);
 
   return (
     <div
@@ -58,28 +49,6 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
           >
             Plein air painting in berlin
           </h1>
-
-          {/* Button */}
-          <div className="pt-[2vh] flex justify-center lg:justify-start">
-            <Button
-              onClick={handleButtonClick}
-              variant="primary"
-            >
-              nach unten scrollen für mehr
-            </Button>
-          </div>
-
-          {/* Arrow - responsive positioning */}
-          <div
-            className="flex justify-center lg:justify-start pt-[4vh] lg:pt-[2vh]"
-            style={{ paddingLeft: 'clamp(0px, 15vw, 266px)' }}
-          >
-            <Arrow
-              direction="down"
-              onClick={handleButtonClick}
-              className="relative"
-            />
-          </div>
         </div>
 
         {/* Right Video - fully responsive */}
@@ -118,8 +87,6 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
               }}
             >
               <source src="/assets/videos/atWork.qt" type="video/quicktime" />
-              <source src="/assets/videos/atWork.mp4" type="video/mp4" />
-              <source src="/assets/videos/atWork.webm" type="video/webm" />
               Your browser does not support the video tag.
             </video>
             

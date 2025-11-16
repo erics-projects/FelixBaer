@@ -182,7 +182,7 @@ const ArtistSection = memo<ArtistSectionProps>(({
 
   return (
     <div
-      className={cn("w-full h-full", className)}
+      className={cn("w-full h-full relative", className)}
       aria-label="Artist information"
     >
       <div className="flex flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] items-center h-full max-w-[min(100vw,1800px)] mx-auto">
@@ -235,12 +235,11 @@ const ArtistSection = memo<ArtistSectionProps>(({
           >
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
             tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-            no sea takimata sanctus est
+            vero eos et
           </p>
 
           {/* More About Button */}
-          <div className="pt-[2vh] flex justify-center lg:justify-start">
+          <div className="pt-[4vh] flex justify-center lg:justify-start">
             <Button
               onClick={handleMoreAboutClick}
               variant="primary"
