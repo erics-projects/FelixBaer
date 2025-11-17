@@ -8,7 +8,7 @@ export interface KeyvisualProps {
   className?: string;
 }
 
-const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
+const Keyvisual = memo<KeyvisualProps>(({ className }) => {
   // Modern event handler with startTransition
 
   return (
@@ -16,7 +16,7 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
       className={cn("w-full h-full", className)}
       aria-label="Hero section"
     >
-      <div className="flex flex-col lg:flex-row items-center gap-[4vw] lg:gap-[8vw] h-full max-w-[min(100vw,1800px)] mx-auto">
+      <div className="flex flex-col justify-between lg:flex-row items-center gap-[4vw] lg:gap-[8vw] h-full max-w-[min(100vw,1800px)] mx-auto" style={{ marginLeft: '5%', marginRight: '5%' }}>
         {/* Left Content - viewport-aware sizing */}
         <div
           className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] text-center lg:text-left"
@@ -63,6 +63,7 @@ const Keyvisual = memo<KeyvisualProps>(({ className, onButtonClick }) => {
               aspectRatio: '4/5',
             }}
           >
+
             <video
               className="w-full h-full object-cover"
               autoPlay

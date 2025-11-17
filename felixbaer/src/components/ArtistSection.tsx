@@ -11,7 +11,7 @@ export interface ArtistSectionProps {
   onBackClick?: () => void;
 }
 
-const ArtistSection = memo<ArtistSectionProps>(({ 
+const ArtistSection = memo<ArtistSectionProps>(({
   className, 
   onMoreAboutClick, 
   onBackClick 
@@ -185,7 +185,7 @@ const ArtistSection = memo<ArtistSectionProps>(({
       className={cn("w-full h-full relative", className)}
       aria-label="Artist information"
     >
-      <div className="flex flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] items-center h-full max-w-[min(100vw,1800px)] mx-auto">
+      <div className="flex justify-between flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] items-center h-full max-w-[min(100vw,1800px)] mx-auto" style={{ marginLeft: '5%', marginRight: '5%' }}>
         
         {/* Left Content */}
         <div
