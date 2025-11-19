@@ -201,14 +201,10 @@ const HomePage = () => {
         <div className="w-full flex flex-col">
           {/* Keyvisual Component - 100% window width */}
           <div className="w-full">
-            <Keyvisual onButtonClick={handleButtonClick} />
-          </div>
-          
-          {/* Artist Section - 100% window width */}
-          <div className="w-full">
-            <ArtistSection
-              onMoreAboutClick={handleButtonClick}
-              onBackClick={handleButtonClick}
+            <Keyvisual className={"m-0 p-0"}/>
+            <ArtistSection className={"m-0 p-0"}
+                onMoreAboutClick={handleButtonClick}
+                onBackClick={handleButtonClick}
             />
           </div>
         </div>

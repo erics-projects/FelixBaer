@@ -1,3 +1,5 @@
+// noinspection TypeScriptValidateTypes
+
 'use client';
 
 import { memo, useCallback, startTransition, useState } from 'react';
@@ -11,11 +13,11 @@ export interface ArtistSectionProps {
   onBackClick?: () => void;
 }
 
-const ArtistSection = memo<ArtistSectionProps>(({ 
-  className, 
-  onMoreAboutClick, 
-  onBackClick 
-}) => {
+const ArtistSection = memo(function ArtistSectionProps({
+  className,
+  onMoreAboutClick,
+  onBackClick,
+}: ArtistSectionProps) {
   const [showBiography, setShowBiography] = useState(false);
 
   // Modern event handlers with startTransition
@@ -182,82 +184,82 @@ const ArtistSection = memo<ArtistSectionProps>(({
 
   return (
     <div
-      className={cn("w-full h-full", className)}
+      className={cn("w-full h-full relative", className)}
       aria-label="Artist information"
     >
-      <div className="flex flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] items-center h-full max-w-[min(100vw,1800px)] mx-auto">
-        
+      <div
+          className="flex justify-between flex-col lg:flex-row gap-[4vw] lg:gap-[8vw] items-center h-full max-w-[min(100vw,1800px)] mx-auto"
+          style={{marginLeft: '5%', marginRight: '5%'}}>
+
         {/* Left Content */}
         <div
-          className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] text-center lg:text-left"
-          style={{ maxWidth: 'min(100%, 600px)' }}
+            className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] text-center lg:text-left"
+            style={{maxWidth: 'min(100%, 1000px)'}}
         >
           {/* Artist Name */}
-          <h2 
-            className="leading-tight"
-            style={{
-              fontSize: 'clamp(1.125rem, 2.5vw, 2rem)',
-              fontFamily: typography.textStyles.heading.fontFamily,
-              fontWeight: typography.textStyles.heading.fontWeight,
-              color: colors.primary.medium,
-              lineHeight: '1.175',
-            }}
+          <h2
+              className="leading-tight"
+              style={{
+                fontSize: 'clamp(1.125rem, 2.5vw, 2rem)',
+                fontFamily: typography.textStyles.heading.fontFamily,
+                fontWeight: typography.textStyles.heading.fontWeight,
+                color: colors.primary.medium,
+                lineHeight: '1.175',
+              }}
           >
             Felix Bär
           </h2>
 
           {/* Artist Description */}
-          <h3 
-            className="leading-tight"
-            style={{
-              fontSize: 'clamp(2rem, 6vw, 5.5rem)',
-              fontFamily: typography.fontFamilies.decorative,
-              fontWeight: typography.textStyles.decorativeHeading.fontWeight,
-              color: colors.text.dark,
-              lineHeight: '1.15',
-            }}
+          <h3
+              className="leading-tight"
+              style={{
+                fontSize: 'clamp(2rem, 6vw, 5.5rem)',
+                fontFamily: typography.fontFamilies.decorative,
+                fontWeight: typography.textStyles.decorativeHeading.fontWeight,
+                color: colors.text.dark,
+                lineHeight: '1.15',
+              }}
           >
             Lorem ipsum dolor sit amet consetetur
           </h3>
 
           {/* Description Text */}
-          <p 
-            className="leading-relaxed"
-            style={{
-              fontSize: 'clamp(0.875rem, 2.2vw, 1.5rem)',
-              fontFamily: typography.textStyles.body.fontFamily,
-              fontWeight: typography.textStyles.body.fontWeight,
-              color: colors.text.primary,
-              lineHeight: '1.583',
-              letterSpacing: '1.5%',
-              maxWidth: 'min(100%, 45ch)'
-            }}
+          <p
+              className="leading-relaxed"
+              style={{
+                fontSize: 'clamp(0.875rem, 2.2vw, 1.5rem)',
+                fontFamily: typography.textStyles.body.fontFamily,
+                fontWeight: typography.textStyles.body.fontWeight,
+                color: colors.text.primary,
+                lineHeight: '1.583',
+                letterSpacing: '1.5%',
+              }}
           >
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At 
-            vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
-            no sea takimata sanctus est
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
+            vero eos et
           </p>
 
           {/* More About Button */}
-          <div className="pt-[2vh] flex justify-center lg:justify-start">
+          <div className="pt-[4vh] flex justify-center lg:justify-start">
             <Button
-              onClick={handleMoreAboutClick}
-              variant="primary"
+                onClick={handleMoreAboutClick}
+                variant="primary"
             >
               Mehr Über mich
             </Button>
           </div>
 
           {/* Signature */}
-          <div className="pt-[2vh] flex justify-center lg:justify-start">
-            <div 
-              className="bg-gray-200 rounded flex items-center justify-center text-gray-600"
-              style={{
-                width: 'clamp(8rem, 15vw, 10rem)',
-                height: 'clamp(2rem, 4vh, 3rem)',
-                fontSize: 'clamp(0.75rem, 1.5vw, 1rem)'
-              }}
+          <div className="pt-[5vh] flex justify-center lg:justify-start">
+            <div
+                className="bg-gray-200 rounded flex items-center justify-center text-gray-600"
+                style={{
+                  width: 'clamp(8rem, 15vw, 10rem)',
+                  height: 'clamp(2rem, 4vh, 3rem)',
+                  fontSize: 'clamp(0.75rem, 1.5vw, 1rem)'
+                }}
             >
               unterschrift-baer
             </div>
@@ -265,48 +267,52 @@ const ArtistSection = memo<ArtistSectionProps>(({
         </div>
 
         {/* Right Image */}
-        <div 
-          className="w-full lg:flex-1 flex-shrink-0"
-          style={{ maxWidth: 'min(795px, 45vw)' }}
+        <div
+            className="w-full lg:flex-1 flex-shrink-0"
+            style={{maxWidth: 'min(100%, 700px)'}}
         >
           <div
-            className="w-full overflow-hidden shadow-lg"
-            style={{
-              height: 'clamp(25rem, 60vh, 62rem)',
-            }}
+              className="w-full overflow-hidden shadow-lg"
+              style={{
+                margin: '0 auto',
+                aspectRatio: '4 / 5', // Maintain 800x1000 aspect ratio
+              }}
           >
             <img
-              src="/assets/images/artist-portrait.jpg"
-              alt="Felix Bär - Artist Portrait"
-              className="w-full h-full object-cover"
-              style={{
-                objectPosition: 'center',
-              }}
-              onError={(e) => {
-                // Fallback if image doesn't load
-                const target = e.target as HTMLImageElement;
-                target.style.display = 'none';
-                const fallback = target.nextElementSibling as HTMLElement;
-                if (fallback) {
-                  fallback.style.display = 'flex';
-                }
-              }}
+                src="/assets/images/artist-portrait.jpg"
+                alt="Felix Bär - Artist Portrait"
+                className="w-full h-full object-cover"
+                style={{
+                  width: '800px',
+                  height: '1000px',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+                onError={(e) => {
+                  // Fallback if image doesn't load
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                  const fallback = target.nextElementSibling as HTMLElement;
+                  if (fallback) {
+                    fallback.style.display = 'flex';
+                  }
+                }}
             />
             {/* Fallback content - hidden by default */}
             <div
-              className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 hidden items-center justify-center text-gray-500"
-              style={{ display: 'none' }}
+                className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-200 hidden items-center justify-center text-gray-500"
+                style={{display: 'none'}}
             >
               <div className="text-center p-[2vw]">
                 <div
-                  className="font-medium mb-2"
-                  style={{ fontSize: 'clamp(1rem, 2.5vw, 1.25rem)' }}
+                    className="font-medium mb-2"
+                    style={{fontSize: 'clamp(1rem, 2.5vw, 1.25rem)'}}
                 >
                   Artist Portrait
                 </div>
                 <div
-                  className="opacity-75"
-                  style={{ fontSize: 'clamp(0.875rem, 2vw, 1rem)' }}
+                    className="opacity-75"
+                    style={{fontSize: 'clamp(0.875rem, 2vw, 1rem)'}}
                 >
                   Professional photo will be here
                 </div>
