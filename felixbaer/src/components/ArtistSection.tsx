@@ -84,7 +84,7 @@ const ArtistSection = memo(function ArtistSectionProps({
 
   if (showBiography) {
     return (
-      <section 
+      <section
         className={cn("w-full h-full", className)}
         aria-label="Artist biography"
       >
@@ -184,7 +184,7 @@ const ArtistSection = memo(function ArtistSectionProps({
 
   return (
     <div
-      className={cn("w-full h-full relative", className)}
+      className={cn("w-full h-full flex justify-center items-center", className)}
       aria-label="Artist information"
     >
       <div
@@ -279,7 +279,7 @@ const ArtistSection = memo(function ArtistSectionProps({
               }}
           >
             <img
-                src="/assets/images/artist-portrait.jpg"
+                src="/assets/images/2025_U-Kurfürstendamm_56x38cm.jpg"
                 alt="Felix Bär - Artist Portrait"
                 className="w-full h-full object-cover"
                 style={{
