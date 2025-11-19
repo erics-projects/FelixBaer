@@ -5,44 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c849079-6eee-458e-97fd-7f321de83f6e" name="Changes" comment="add pictures">
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_Alter-Fritz_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_Gendarmenmarkt III_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_Kunstmarkt_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_Schiller_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_Schlossbruecke_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_U-Kurfürstendamm_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/assets/images/2025/2025_U-Zoologischer_Garten_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_Alter-Fritz_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_Gendarmenmarkt III_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_Kunstmarkt_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_Schiller_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_Schlossbruecke_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_U-Kurfürstendamm_56x38cm.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2025/2025_U-Zoologischer_Garten_56x38cm.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Auf_der_Brücke.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Flohmarkt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Kunst_verbindet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Make_Compliments.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Räumliche_Kulisse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Sonne_zu_Wolken.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Soul_Growing_Old.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Street_Photography.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Terrassenufer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_Up_The_Street.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/images/2025/2025_VorJahrhunderten.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Auf_der_Brücke.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Flohmarkt.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Kunst_verbindet.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Make_Compliments.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Räumliche_Kulisse.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Sonne_zu_Wolken.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Soul_Growing_Old.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Street_Photography.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Terrassenufer.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_Up_The_Street.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/2025/2025_VorJahrhunderten.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Gallery.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Gallery.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,19 +33,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "git-widget-placeholder": "ChangeImage",
-    "last_opened_file_path": "/Users/ericbeier/DataspellProjects/FelixBaer/felixbaer/src/assets/images/2025",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "pnpm",
-    "ts.external.directory.path": "/Users/ericbeier/DataspellProjects/FelixBaer/felixbaer/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;ChangeImage&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ericbeier/DataspellProjects/FelixBaer/felixbaer/src/assets/images/2025&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;pnpm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/ericbeier/DataspellProjects/FelixBaer/felixbaer/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/assets/images/2025" />
@@ -100,7 +65,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1763580000962</updated>
-      <workItem from="1763580002093" duration="1690000" />
+      <workItem from="1763580002093" duration="1838000" />
+      <workItem from="1763581927124" duration="1145000" />
     </task>
     <servers />
   </component>
