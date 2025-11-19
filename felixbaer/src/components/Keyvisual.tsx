@@ -13,7 +13,7 @@ const Keyvisual = memo<KeyvisualProps>(({ className }) => {
 
   return (
     <div
-      className={cn("w-full h-full", className)}
+      className={cn("w-full h-full flex justify-center items-center", className)}
       aria-label="Hero section"
     >
         <div

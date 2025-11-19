@@ -459,62 +459,42 @@ const Gallery = memo<GalleryProps>(({ className }) => {
     {
       year: '2025',
       title: 'Neue Werke 2025',
-      coverImage: '/assets/images/2025/2025_Auf_der_Brücke.jpg',
+      coverImage: '/assets/images/2025/2025_Kunstmarkt_56x38cm.jpg',
       images: [
         {
-          src: '/assets/images/2025/2025_Auf_der_Brücke.jpg',
-          title: 'Auf der Brücke',
-          description: 'Aquarell auf Papier - Eine eindrucksvolle Szene auf der Brücke'
+          src: '/assets/images/2025/2025_Alter-Fritz_56x38cm.jpg',
+          title: 'Alter Fritz',
+          description: 'Aquarell auf Papier'
         },
         {
-          src: '/assets/images/2025/2025_Flohmarkt.jpg',
-          title: 'Flohmarkt',
-          description: 'Lebendige Marktszene in Aquarell'
+          src: '/assets/images/2025/2025_Gendarmenmarkt III_56x38cm.jpg',
+          title: 'Gendarmenmarkt III',
+          description: 'Marktszene in Aquarell'
         },
         {
-          src: '/assets/images/2025/2025_Kunst_verbindet.jpg',
+          src: '/assets/images/2025/2025_Kunstmarkt_56x38cm.jpg',
           title: 'Kunst verbindet',
           description: 'Ein Werk über die verbindende Kraft der Kunst'
         },
         {
-          src: '/assets/images/2025/2025_Make_Compliments.jpg',
-          title: 'Make Compliments',
-          description: 'Positive Energie in Aquarellform'
+          src: '/assets/images/2025/2025_Schiller_56x38cm.jpg',
+          title: 'Schiller',
+          description: 'Schillerstatur in Aquarellform'
         },
         {
-          src: '/assets/images/2025/2025_Räumliche_Kulisse.jpg',
-          title: 'Räumliche Kulisse',
-          description: 'Architektonische Formen und Raum'
+          src: '/assets/images/2025/2025_Schlossbruecke_56x38cm.jpg',
+          title: 'Schlossbrücke',
+          description: 'Brücke vor dem Schloss'
         },
         {
-          src: '/assets/images/2025/2025_Sonne_zu_Wolken.jpg',
-          title: 'Sonne zu Wolken',
-          description: 'Das Spiel zwischen Licht und Schatten'
+          src: '/assets/images/2025/2025_U-Kurfürstendamm_56x38cm.jpg',
+          title: 'U-Kurfürstendamm',
+          description: 'U-Bahneingang U-Kuhdamm in Aquarell'
         },
         {
-          src: '/assets/images/2025/2025_Soul_Growing_Old.jpg',
-          title: 'Soul Growing Old',
-          description: 'Eine Reflexion über Zeit und Seele'
-        },
-        {
-          src: '/assets/images/2025/2025_Street_Photography.jpg',
-          title: 'Street Photography',
-          description: 'Straßenszenen in Aquarell interpretiert'
-        },
-        {
-          src: '/assets/images/2025/2025_Terrassenufer.jpg',
-          title: 'Terrassenufer',
-          description: 'Landschaftsaquarell vom Ufer'
-        },
-        {
-          src: '/assets/images/2025/2025_Up_The_Street.jpg',
-          title: 'Up The Street',
-          description: 'Urbane Perspektiven'
-        },
-        {
-          src: '/assets/images/2025/2025_VorJahrhunderten.jpg',
-          title: 'Vor Jahrhunderten',
-          description: 'Eine Reise in die Vergangenheit'
+          src: '/assets/images/2025/2025_U-Zoologischer_Garten_56x38cm.jpg',
+          title: 'U-Zoologischer Garten',
+          description: 'U-Bahneingang U-Zoo in Aquarell'
         }
       ]
     },
