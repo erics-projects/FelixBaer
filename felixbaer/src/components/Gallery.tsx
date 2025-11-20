@@ -206,7 +206,7 @@ const ImageModal = memo<{
       </button>
 
       {/* Progress Bar */}
-      <div className="absolute top-8 left-8 right-20 z-30">
+      <div className="absolute bottom-8 left-8 right-20 z-30">
         <div className="flex items-center gap-4">
           <div className="text-white/60 text-sm font-mono">
             {String(currentIndex + 1).padStart(2, '0')} / {String(folder.images.length).padStart(2, '0')}
@@ -358,7 +358,7 @@ const ImageModal = memo<{
                       src={image.src}
                       alt={image.title}
                       className={cn(
-                        "w-full h-full object-cover transition-all duration-500 pointer-events-none",
+                        "w-full h-full object-contain transition-all duration-500 pointer-events-none",
                         isCenter && !isLoading && "scale-100 opacity-100",
                         isCenter && isLoading && "scale-95 opacity-0"
                       )}
