@@ -4,7 +4,7 @@
 
 import { memo, useCallback, startTransition, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { colors, typography } from '@/styles/tokens';
+// 
 import { Button } from '@/components';
 
 export interface ArtistSectionProps {
@@ -56,7 +56,7 @@ const ArtistSection = memo(function ArtistSectionProps({
         style={{ marginLeft: '5%', marginRight: '5%' }}
       >
         {/* Wrapper for Image and Text */}
-        <div className="flex flex-col lg:flex-row w-full h-full gap-[4vw] lg:gap-[8vw]">
+        <div className="flex flex-col lg:flex-row w-full h-full gap-[4vw] lg:gap-[8vw] items-stretch">
           {/* Image Section */}
           <div
             className={cn(
@@ -69,7 +69,7 @@ const ArtistSection = memo(function ArtistSectionProps({
               className="w-full overflow-hidden shadow-lg"
               style={{
                 margin: '0 auto',
-                aspectRatio: '4 / 5', // Maintain 800x1000 aspect ratio
+                height: '100%', // Ensure the image matches the text box height
               }}
             >
               <img
@@ -77,8 +77,8 @@ const ArtistSection = memo(function ArtistSectionProps({
                 alt="Felix Bär - Artist Portrait"
                 className="w-full h-full object-cover"
                 style={{
-                  width: '800px',
-                  height: '1000px',
+                  width: 'auto',
+                  height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center',
                 }}
@@ -100,32 +100,7 @@ const ArtistSection = memo(function ArtistSectionProps({
           >
             {showBiography ? (
               <>
-                <h2
-                  className="leading-tight"
-                  style={{
-                    fontSize: 'clamp(1.5rem, 3vw, 2.5rem)',
-                    fontFamily: 'Nanum Myeongjo',
-                    fontWeight: 700,
-                    color: '#111111',
-                    lineHeight: '1.2',
-                  }}
-                >
-                  Meine Aquarellmalerei
-                </h2>
-                <p
-                  className="leading-relaxed"
-                  style={{
-                    fontSize: 'clamp(1rem, 2.5vw, 1.75rem)',
-                    fontFamily: 'Public Sans',
-                    fontWeight: 400,
-                    color: '#505C7F',
-                    lineHeight: '1.6',
-                  }}
-                >
-                  Meine Aquarellmalerei befasst sich damit, Atmosphäre, Stimmung und Raum zu schaffen. Mit einem Medium, in dem sich Präzision und Abstraktion abwechseln und deren Kombination die Qualität erzeugt. Meine Motive zeigen häufig eine Mischung aus Geschäftigkeit und Ruhe. Diese kompositorischen Kontraste sind der Grund für meine Faszination des Aquarells.
-                </p>
-                <h3
-                  className="leading-tight"
+                <h2                  className="leading-tight"
                   style={{
                     fontSize: 'clamp(1.25rem, 2.8vw, 2rem)',
                     fontFamily: 'Nanum Myeongjo',
@@ -136,7 +111,7 @@ const ArtistSection = memo(function ArtistSectionProps({
                   }}
                 >
                   Über mich
-                </h3>
+                </h2>
                 <p
                   className="leading-relaxed"
                   style={{
