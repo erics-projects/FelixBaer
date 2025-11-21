@@ -1,6 +1,6 @@
 'use client';
 
-import { memo, useMemo, useCallback, startTransition, use } from 'react';
+import { memo, useMemo, useCallback, startTransition } from 'react';
 import { cn } from '@/lib/utils';
 import { Keyvisual, ArtistSection, Gallery, Exhibitions, Contact } from '@/components';
 
@@ -178,8 +178,8 @@ Timeline.displayName = 'Timeline';
 // Main HomePage component with modern React patterns
 const HomePage = () => {
   // Memoized gallery items
-  const galleryItems = useMemo(() => Array.from({ length: 7 }, (_, i) => i + 1), []);
-  const timelineItems = useMemo(() => [1, 2, 3, 4], []);
+  // const galleryItems = useMemo(() => Array.from({ length: 7 }, (_, i) => i + 1), []);
+  // const timelineItems = useMemo(() => [1, 2, 3, 4], []);
 
 
   // Modern event handlers with useCallback
