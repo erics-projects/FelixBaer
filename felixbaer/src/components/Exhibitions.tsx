@@ -71,7 +71,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
             fontWeight: 400,
             color: '#505C7F',
             lineHeight: '1.6',
-            marginBottom: '1.5rem',
+            marginBottom: '2.5rem',
             margin: '0 auto',
           }}
         >
