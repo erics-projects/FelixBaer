@@ -26,7 +26,7 @@ const Section = memo<{
     compact = false
   } = props;
   
-  const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[50vh]';
+  const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[10vh]';
   const backdropClass = withBackdrop ? (darkBackdrop ? 'content-backdrop-dark' : 'content-backdrop') : '';
   
   return (
@@ -211,6 +211,7 @@ const HomePage = () => {
       </Section>
 
       {/* Gallery Section */}
+      <div className="h-[50px] w-full"></div>
       <Section
         aria-label="Gallery section"
         id="gallery"

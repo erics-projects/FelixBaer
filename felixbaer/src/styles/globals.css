@@ -145,3 +145,8 @@ body {
     opacity: 0;
   }
 }
+
+/* Add button-specific margin-top */
+button {
+  margin-top: 2%; /* Adjust the value as needed */
+}

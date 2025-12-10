@@ -71,10 +71,10 @@ const Contact = memo<ContactProps>(({ className, onSubmit }) => {
             <h2 
               className="mb-8"
               style={{
-                fontSize: '28px',
-                fontFamily: typography.textStyles.body.fontFamily,
+                fontSize: 'clamp(1.25rem, 2.8vw, 2rem)',
+                fontFamily: 'Nanum Myeongjo',
                 fontWeight: 600,
-                lineHeight: '1.175em',
+                lineHeight: '1.3',
                 color: colors.text.primary,
               }}
             >

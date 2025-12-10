@@ -50,10 +50,10 @@ const Checkbox: React.FC<CheckboxProps> = ({
   };
 
   const labelStyles: React.CSSProperties = {
-    fontFamily: typography.textStyles.checkbox.fontFamily,
-    fontWeight: typography.textStyles.checkbox.fontWeight,
-    fontSize: typography.textStyles.checkbox.fontSize,
-    lineHeight: typography.textStyles.checkbox.lineHeight,
+    fontFamily: 'Public Sans, sans-serif',
+    fontWeight: 400,
+    fontSize: '24px',
+    lineHeight: '1.583',
     letterSpacing: typography.textStyles.checkbox.letterSpacing,
     color: colors.text.primary,
     flex: 1,

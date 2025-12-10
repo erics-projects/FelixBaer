@@ -625,8 +625,13 @@ const Gallery = memo<GalleryProps>(({ className }) => {
 
   return (
     <>
-      <section 
-        className={cn("w-full py-16", className)}
+      <section
+        id="gallery"
+        className={cn("w-full p-0 m-0", className)}
+        style={{
+          height: 'auto',
+          marginBottom: '5%',
+        }}
         aria-label="Kunstwerke Galerie"
       >
         {/* Header */}
@@ -634,20 +639,26 @@ const Gallery = memo<GalleryProps>(({ className }) => {
           <h2 
             className="mb-4"
             style={{
-              fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-              fontFamily: typography.fontFamilies.decorative,
-              fontWeight: typography.textStyles.decorativeHeading.fontWeight,
-              color: colors.text.primary,
+              fontSize: 'clamp(2rem, 6vw, 5.5rem)',
+              fontFamily: 'Nanum Myeongjo',
+              fontWeight: 400,
+              color: 'rgb(17, 17, 17)',
+              lineHeight: '1.15',
             }}
           >
             Galerie
           </h2>
-          <p 
-            className="text-gray-600 max-w-2xl mx-auto"
+          <p
+            className="text-gray-600 mx-auto text-center"
             style={{
-              fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-              fontFamily: typography.textStyles.body.fontFamily,
-              lineHeight: '1.6'
+              fontSize: 'clamp(1rem, 2.5vw, 1.75rem)',
+              fontFamily: 'Public Sans',
+              fontWeight: 400,
+              color: '#505C7F',
+              lineHeight: '1.6',
+              marginBottom: '2rem',
+              margin: '0 auto',
+              maxWidth: '80%',
             }}
           >
             Entdecken Sie Felix Bärs Kunstwerke aus den Jahren 2023 bis 2025
