@@ -54,20 +54,25 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
         <h2 
           className="mb-4"
           style={{
-            fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-            fontFamily: typography.fontFamilies.decorative,
-            fontWeight: typography.textStyles.decorativeHeading.fontWeight,
-            color: colors.text.primary,
+            fontSize: 'clamp(2rem, 6vw, 5.5rem)',
+            fontFamily: 'Nanum Myeongjo',
+            fontWeight: 400,
+            color: 'rgb(17, 17, 17)',
+            lineHeight: '1.15',
           }}
         >
           Meine Ausstellungen
         </h2>
-        <p 
-          className="text-gray-600 max-w-2xl mx-auto"
+        <p
+          className="text-gray-600 max-w-2xl mx-auto text-center"
           style={{
-            fontSize: 'clamp(1rem, 2.5vw, 1.25rem)',
-            fontFamily: typography.textStyles.body.fontFamily,
-            lineHeight: '1.6'
+            fontSize: 'clamp(1rem, 2.5vw, 1.75rem)',
+            fontFamily: 'Public Sans',
+            fontWeight: 400,
+            color: '#505C7F',
+            lineHeight: '1.6',
+            marginBottom: '1.5rem',
+            margin: '0 auto',
           }}
         >
           Wo's bald was zu sehen gibt

@@ -26,7 +26,7 @@ const Section = memo<{
     compact = false
   } = props;
   
-  const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[50vh]';
+  const heightClass = fullHeight ? 'min-h-screen' : 'min-h-[10vh]';
   const backdropClass = withBackdrop ? (darkBackdrop ? 'content-backdrop-dark' : 'content-backdrop') : '';
   
   return (

@@ -21,12 +21,12 @@ const Button: React.FC<ButtonProps> = ({
   const [isPressed, setIsPressed] = useState(false);
 
   const baseStyles: React.CSSProperties = {
-    fontFamily: typography.textStyles.button.fontFamily,
-    fontWeight: typography.textStyles.button.fontWeight,
-    fontSize: typography.textStyles.button.fontSize,
-    lineHeight: typography.textStyles.button.lineHeight,
+    fontFamily: 'Public Sans, sans-serif',
+    fontWeight: 400,
+    fontSize: '20px',
+    lineHeight: '1.175',
     textTransform: typography.textStyles.button.textTransform,
-    marginTop: typography.textStyles.button.marginTop,
+    marginTop: '1.5rem',
     padding: spacing.button.padding,
     borderRadius: borderRadius.full,
     border: 'none',
