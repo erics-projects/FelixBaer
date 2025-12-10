@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c849079-6eee-458e-97fd-7f321de83f6e" name="Changes" comment="add dependecies">
-      <change beforePath="$PROJECT_DIR$/src/components/ArtistSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ArtistSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
-    </list>
+    <list default="true" id="4c849079-6eee-458e-97fd-7f321de83f6e" name="Changes" comment="add dependecies" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,7 +13,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$/.." value="addNewPictures" />
+        <entry key="$PROJECT_DIR$/.." value="spacing" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -35,7 +32,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "git-widget-placeholder": "UpdateArtistCV",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/ericbeier/DataspellProjects/FelixBaer/felixbaer/src/assets/images/2025",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,6 +64,7 @@
       <workItem from="1763580002093" duration="1838000" />
       <workItem from="1763581927124" duration="1647000" />
       <workItem from="1763636338762" duration="35000" />
+      <workItem from="1765371083304" duration="83000" />
     </task>
     <task id="LOCAL-00001" summary="add dependecies">
       <option name="closed" value="true" />
