@@ -56,20 +56,19 @@ const ArtistSection = memo(function ArtistSectionProps({
         style={{ marginLeft: '5%', marginRight: '5%' }}
       >
         {/* Wrapper for Image and Text */}
-        <div className="flex flex-col-reverse lg:flex-row-reverse w-full h-full gap-[6vw] lg:gap-[10vw] items-stretch">
+        <div className="flex flex-col lg:flex-row-reverse w-full h-full gap-[6vw] lg:gap-[10vw] items-stretch items-center lg:items-stretch">
           {/* Image Section */}
           <div
-            className={cn(
-              "w-full lg:flex-1 flex-shrink-0 sticky top-0",
-              showBiography ? "order-last lg:order-first" : "order-first"
-            )}
-            style={{ maxWidth: 'min(100%, 700px)', height: 'auto' }}
+            className="w-full lg:flex-1 flex-shrink-0 sticky top-0 order-first"
+            style={{ maxWidth: '700px' }}
           >
             <div
               className="w-full overflow-hidden shadow-lg"
               style={{
                 margin: '0 auto',
-                height: '100%', // Ensure the image matches the text box height
+                aspectRatio: '4 / 5',
+                width: '100%',
+                maxWidth: '700px',
               }}
             >
               <img
@@ -77,8 +76,6 @@ const ArtistSection = memo(function ArtistSectionProps({
                 alt="Felix Bär - Artist Portrait"
                 className="w-full h-full object-cover"
                 style={{
-                  width: 'auto',
-                  height: '100%',
                   objectFit: 'cover',
                   objectPosition: 'center',
                 }}
@@ -93,8 +90,8 @@ const ArtistSection = memo(function ArtistSectionProps({
                animationClass
              )}
              style={{
-               height: 'auto',
-               aspectRatio: '4 / 5', // Maintain the same aspect ratio as the image
+               aspectRatio: '4 / 5',
+               width: '100%',
                padding: '1rem',
              }}
           >

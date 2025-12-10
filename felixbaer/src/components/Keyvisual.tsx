@@ -62,7 +62,8 @@ const Keyvisual = memo<KeyvisualProps>(({ className }) => {
                     className="w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 relative"
                     style={{
                         margin: '0 auto',
-                        aspectRatio: '4 / 5', // Maintain 800x1000 aspect ratio
+                        aspectRatio: '4 / 5',
+                        width: '100%',
                     }}
                 >
 

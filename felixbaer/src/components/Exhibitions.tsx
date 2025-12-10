@@ -214,22 +214,74 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
                 </div>
               ) : (
                 <div
-                  className="relative w-80 h-[500px] flex items-center justify-center"
+                  className="relative w-80 h-[500px] flex items-center justify-center overflow-hidden"
                   style={{
-                    background: 'white',
                     borderRadius: '24px',
                     boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
                   }}
                 >
-                  <span
-                    className="text-gray-800 font-bold"
+                  {/* Blurred Background Image */}
+                  <img
+                    src="/assets/images/backgroundCards1.png"
+                    alt="Exhibition Background"
+                    className="absolute inset-0 w-full h-full object-cover"
                     style={{
-                      fontSize: 'clamp(1.5rem, 3vw, 2rem)',
-                      fontFamily: typography.fontFamilies.decorative,
+                      filter: 'blur(20px) brightness(0.5)',
+                      opacity: 0.7,
                     }}
-                  >
-                    Details
-                  </span>
+                  />
+                  <div className="absolute inset-0 flex flex-col justify-between p-8 text-center">
+                    {/* Centered Description */}
+                    <div className="flex-1 flex items-center justify-center px-6">
+                      <p
+                        className="text-white/80 font-medium text-center"
+                        style={{
+                          fontSize: 'clamp(0.8rem, 1.5vw, 1rem)',
+                          fontFamily: typography.textStyles.body.fontFamily,
+                          textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+                        }}
+                      >
+                        Wenn das Wetter gut ist, findet ihr mich am Samstag den 22.November 2024 am Berliner Dom. Ich freue mich über jeden, den ich treffe.
+                      </p>
+                    </div>
+
+                    {/* Title and Location at the Bottom */}
+                    <div className="text-center space-y-4">
+                      {/* Title */}
+                      <h3
+                        className="text-white font-bold transition-all duration-300"
+                        style={{
+                          fontSize: 'clamp(1.5rem, 3vw, 2rem)',
+                          fontFamily: typography.fontFamilies.decorative,
+                          textShadow: '0 4px 20px rgba(0,0,0,0.7)',
+                          lineHeight: '1.2',
+                        }}
+                      >
+                        {exhibition.title}
+                      </h3>
+
+                      {/* Location */}
+                      <div className="flex items-center justify-center">
+                        <div
+                          className="w-2 h-2 rounded-full mr-3 transition-all duration-300"
+                          style={{
+                            background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.8) 0%, rgba(147, 51, 234, 0.8) 100%)',
+                            boxShadow: '0 0 10px rgba(59, 130, 246, 0.5)',
+                          }}
+                        />
+                        <span
+                          className="text-white/90 font-medium"
+                          style={{
+                            fontSize: 'clamp(0.9rem, 2vw, 1.1rem)',
+                            fontFamily: typography.textStyles.body.fontFamily,
+                            textShadow: '0 2px 10px rgba(0,0,0,0.5)',
+                          }}
+                        >
+                          {exhibition.location}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
