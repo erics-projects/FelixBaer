@@ -211,6 +211,7 @@ const HomePage = () => {
       </Section>
 
       {/* Gallery Section */}
+      <div className="h-[50px] w-full"></div>
       <Section
         aria-label="Gallery section"
         id="gallery"
