@@ -71,8 +71,8 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
             fontWeight: 400,
             color: '#505C7F',
             lineHeight: '1.6',
-            marginBottom: '1.5rem',
             margin: '0 auto',
+            marginBottom: '20px',
           }}
         >
           Wo's bald was zu sehen gibt
