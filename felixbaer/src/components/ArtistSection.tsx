@@ -56,7 +56,7 @@ const ArtistSection = memo(function ArtistSectionProps({
         style={{ marginLeft: '5%', marginRight: '5%' }}
       >
         {/* Wrapper for Image and Text */}
-        <div className="flex flex-col lg:flex-row w-full h-full gap-[4vw] lg:gap-[8vw] items-stretch">
+        <div className="flex flex-col-reverse lg:flex-row-reverse w-full h-full gap-[6vw] lg:gap-[10vw] items-stretch">
           {/* Image Section */}
           <div
             className={cn(
@@ -148,9 +148,11 @@ const ArtistSection = memo(function ArtistSectionProps({
                 >
                   Im Sommer zieht es mich häufig in die Berliner Innenstadt, um dort Plein Air zu malen. Gerade weil Aquarell ein schnelles Medium ist, eignet es sich gut, um ein Bild vor Ort anzufertigen. Ich schätze es wert, wenn die Menschen für einen Moment anhalten und dem Entstehen eines Bildes zusehen. Für komplexere Werke oder um Skizzen von Reisen umzusetzen, bevorzuge ich es, zuhause in Ruhe an einem Bild zu arbeiten.
                 </p>
-                <Button onClick={handleBackClick} variant="primary">
-                  Zurück
-                </Button>
+                <div>
+                  <Button onClick={handleBackClick} variant="primary">
+                    Zurück
+                  </Button>
+                </div>
               </>
             ) : (
               <>
@@ -190,9 +192,11 @@ const ArtistSection = memo(function ArtistSectionProps({
                 >
                   Entdecken Sie die Schönheit und Tiefe meiner Aquarellmalereien, die Atmosphäre, Stimmung und Raum schaffen.
                 </p>
-                <Button onClick={handleMoreAboutClick} variant="primary">
-                  Mehr Über mich
-                </Button>
+                <div className="mt-6">
+                  <Button onClick={handleMoreAboutClick} variant="primary">
+                    Mehr Über mich
+                  </Button>
+                </div>
               </>
             )}
           </div>

@@ -26,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({
     fontSize: typography.textStyles.button.fontSize,
     lineHeight: typography.textStyles.button.lineHeight,
     textTransform: typography.textStyles.button.textTransform,
+    marginTop: typography.textStyles.button.marginTop,
     padding: spacing.button.padding,
     borderRadius: borderRadius.full,
     border: 'none',
