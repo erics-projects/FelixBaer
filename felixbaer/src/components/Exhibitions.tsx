@@ -50,7 +50,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
       aria-label="Ausstellungen"
     >
       {/* Header */}
-      <div className="text-center mb-12 px-6">
+      <div className="text-center mb-8 sm:mb-12 px-4 sm:px-6">
         <h2 
           className="mb-4"
           style={{
@@ -80,7 +80,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
       </div>
 
       {/* Exhibition Cards - Gallery Style */}
-      <div className="flex justify-center gap-12 px-6 perspective-1000">
+      <div className="flex justify-center flex-wrap place-items-center gap-8 sm:gap-12 px-4 sm:px-6 perspective-1000 mx-auto">
         {exhibitions.map((exhibition, index) => {
           const [view, setView] = React.useState<'overview' | 'details'>('overview');
         
@@ -96,7 +96,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
             >
               {view === 'overview' ? (
                 <div
-                  className="relative overflow-hidden transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4"
+                  className="relative overflow-hidden transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4 w-full sm:w-auto"
                   style={{
                     borderRadius: '24px',
                     background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
@@ -106,7 +106,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
                   }}
                 >
                   {/* Card with same dimensions as gallery */}
-                  <div className="relative w-80 h-[500px] bg-gradient-to-br from-gray-900/50 to-gray-800/50 overflow-hidden">
+                  <div className="relative w-full sm:w-80 h-[400px] sm:h-[500px] bg-gradient-to-br from-gray-900/50 to-gray-800/50 overflow-hidden">
                     {/* Background Image */}
                     <img
                       src="/assets/images/backgroundCards1.png"
@@ -214,7 +214,7 @@ const Exhibitions = memo<ExhibitionsProps>(({ className }) => {
                 </div>
               ) : (
                 <div
-                  className="relative w-80 h-[500px] flex items-center justify-center overflow-hidden"
+                  className="relative w-full sm:w-80 h-[400px] sm:h-[500px] flex items-center justify-center overflow-hidden"
                   style={{
                     borderRadius: '24px',
                     boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',

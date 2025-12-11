@@ -191,23 +191,25 @@ const HomePage = () => {
 
   return (
     <main className="min-h-screen w-full overflow-x-hidden">
-      {/* Combined Hero and Artist Section - full window width */}
+      {/* Hero Section */}
       <Section
-        fullHeight={true}
-        aria-label="Hero and Artist section"
-        id="hero-artist"
+        aria-label="Hero section"
+        id="hero"
         className="w-full"
       >
-        <div className="w-full flex flex-col">
-          {/* Keyvisual Component - 100% window width */}
-          <div className="w-full">
-            <Keyvisual className={"m-0 p-0"}/>
-            <ArtistSection className={"m-0 p-0"}
-                onMoreAboutClick={handleButtonClick}
-                onBackClick={handleButtonClick}
-            />
-          </div>
-        </div>
+        <Keyvisual className={"m-0 p-0"}/>
+      </Section>
+
+      {/* Artist Section */}
+      <Section
+        aria-label="Artist section"
+        id="artist"
+        className="w-full"
+      >
+        <ArtistSection className={"m-0 p-0"}
+            onMoreAboutClick={handleButtonClick}
+            onBackClick={handleButtonClick}
+        />
       </Section>
 
       {/* Gallery Section */}
@@ -220,15 +222,17 @@ const HomePage = () => {
         <Gallery />
       </Section>
 
-
       {/* Exhibitions Section */}
       <Section
         aria-label="Exhibitions"
         id="exhibitions"
-        className="w-full"
+        className="w-full py-16"
       >
         <Exhibitions />
       </Section>
+
+      {/* Spacer */}
+      <div className="h-24 sm:h-32 lg:h-40 w-full"></div>
 
       {/* Contact Section */}
       <Section

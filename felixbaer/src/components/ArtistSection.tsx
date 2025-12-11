@@ -50,25 +50,21 @@ const ArtistSection = memo(function ArtistSectionProps({
   }, [onBackClick]);
 
   return (
-    <div className={cn("w-full h-full flex justify-center items-center", className)}>
+    <div className={cn("w-full flex justify-center items-center py-4 sm:py-8", className)}>
       <div
-        className="flex justify-center items-center h-full max-w-[min(100vw,1800px)] mx-auto overflow-hidden"
-        style={{ marginLeft: '5%', marginRight: '5%' }}
+        className="flex justify-center items-center w-full max-w-7xl mx-auto px-4 sm:px-8"
       >
         {/* Wrapper for Image and Text */}
-        <div className="flex flex-col lg:flex-row-reverse w-full h-full gap-[6vw] lg:gap-[10vw] items-stretch items-center lg:items-stretch">
+        <div className="flex flex-col lg:flex-row-reverse w-full gap-6 lg:gap-12 items-center lg:items-start">
           {/* Image Section */}
           <div
-            className="w-full lg:flex-1 flex-shrink-0 sticky top-0 order-first"
-            style={{ maxWidth: '700px' }}
+            className="w-full lg:w-auto flex-shrink-0 order-first max-w-full sm:max-w-[400px] lg:max-w-[500px] mx-auto lg:mx-0"
           >
             <div
               className="w-full overflow-hidden shadow-lg"
               style={{
-                margin: '0 auto',
                 aspectRatio: '4 / 5',
                 width: '100%',
-                maxWidth: '700px',
               }}
             >
               <img
@@ -86,14 +82,9 @@ const ArtistSection = memo(function ArtistSectionProps({
           {/* Text Section */}
 <div
              className={cn(
-               "w-full lg:flex-1 flex-shrink-0 overflow-y-auto",
+               "w-full lg:flex-1 flex-shrink-0 px-4 py-2 lg:p-0",
                animationClass
              )}
-             style={{
-               aspectRatio: '4 / 5',
-               width: '100%',
-               padding: '1rem',
-             }}
           >
             {showBiography ? (
               <>
