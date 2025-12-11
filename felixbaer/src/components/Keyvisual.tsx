@@ -13,20 +13,18 @@ const Keyvisual = memo<KeyvisualProps>(({ className }) => {
 
   return (
     <div
-      className={cn("w-full h-full flex justify-center items-center", className)}
+      className={cn("w-full flex justify-center items-center py-8 sm:py-12 lg:py-16", className)}
       aria-label="Hero section"
     >
         <div
-            className="flex flex-col justify-between lg:flex-row items-center gap-[4vw] lg:gap-[2vw] h-full max-w-[min(100vw,1800px)] mx-auto"
-            style={{marginLeft: '5%', marginRight: '5%'}}>
+            className="flex flex-col justify-between lg:flex-row items-center gap-8 lg:gap-12 w-full max-w-7xl mx-auto px-4 sm:px-8">
             {/* Left Content - viewport-aware sizing */}
             <div
-                className="w-full lg:flex-1 flex-shrink-0 space-y-[3vh] lg:space-y-[4vh] text-center lg:text-left"
-                style={{maxWidth: 'min(100%, 1000px)'}}
+                className="w-full lg:flex-1 flex-shrink-0 space-y-6 text-center lg:text-left"
             >
                 {/* Subtitle */}
                 <h2
-                    className="leading-tight"
+                    className="leading-tight px-4 sm:px-0"
                     style={{
                         fontSize: 'clamp(1.125rem, 2.5vw, 2rem)',
                         fontFamily: typography.textStyles.heading.fontFamily,
@@ -40,7 +38,7 @@ const Keyvisual = memo<KeyvisualProps>(({ className }) => {
 
                 {/* Main Title */}
                 <h1
-                    className="leading-tight lg:leading-none"
+                    className="leading-tight lg:leading-none px-4 sm:px-0"
                     style={{
                         fontSize: 'clamp(2rem, 8vw, 7rem)',
                         fontFamily: typography.fontFamilies.decorative,
@@ -55,15 +53,12 @@ const Keyvisual = memo<KeyvisualProps>(({ className }) => {
 
             {/* Right Video - fully responsive */}
             <div
-                className="w-full lg:flex-1 flex-shrink-0"
-                style={{maxWidth: 'min(100%, 700px)'}}
+                className="w-full lg:w-auto flex-shrink-0 max-w-full sm:max-w-[400px] lg:max-w-[500px] mx-auto lg:mx-0"
             >
                 <div
                     className="w-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 relative"
                     style={{
-                        margin: '0 auto',
                         aspectRatio: '4 / 5',
-                        width: '100%',
                     }}
                 >
 

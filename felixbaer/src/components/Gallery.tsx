@@ -635,7 +635,7 @@ const Gallery = memo<GalleryProps>(({ className }) => {
         aria-label="Kunstwerke Galerie"
       >
         {/* Header */}
-        <div className="text-center mb-12 px-6">
+        <div className="text-center mb-8 sm:mb-12 px-4 sm:px-6">
           <h2 
             className="mb-4"
             style={{
@@ -666,7 +666,7 @@ const Gallery = memo<GalleryProps>(({ className }) => {
         </div>
 
         {/* Ultra-Modern Gallery Cards */}
-        <div className="flex justify-center gap-12 px-6 perspective-1000">
+        <div className="flex flex-wrap justify-center gap-8 sm:gap-12 px-4 sm:px-6 perspective-1000 mx-auto">
           {galleryFolders.map((folder, index) => (
             <div
               key={folder.year}
@@ -678,7 +678,7 @@ const Gallery = memo<GalleryProps>(({ className }) => {
               }}
             >
               <div
-                className="relative overflow-hidden transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4"
+                className="relative overflow-hidden transition-all duration-700 ease-out group-hover:scale-105 group-hover:-translate-y-4 w-full sm:w-auto"
                 style={{
                   borderRadius: '24px',
                   background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
@@ -688,7 +688,7 @@ const Gallery = memo<GalleryProps>(({ className }) => {
                 }}
               >
                 {/* Futuristic card with glassmorphism */}
-                <div className="relative w-80 h-[500px] bg-gradient-to-br from-gray-900/50 to-gray-800/50 overflow-hidden">
+                <div className="relative w-[350px] sm:w-80 h-[400px] sm:h-[500px] bg-gradient-to-br from-gray-900/50 to-gray-800/50 overflow-hidden">
                   {/* Image */}
                   <img
                     src={folder.coverImage}
